@@ -1,0 +1,6 @@
+name: UnlimitedElytra
+version: 2.0.0
+description: Infinite Elytra, yay!
+author: Lupus_Z
+main: main.Main
+api-version: 1.18
