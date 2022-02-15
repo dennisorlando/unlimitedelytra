@@ -4,3 +4,10 @@ description: Infinite Elytra, yay!
 author: Lupus_Z
 main: main.Main
 api-version: 1.18
+api: hadtoputthistopreventwarnings
+
+commands:
+    unlimitedelytra:
+        description: change this plugin's config ingame
+        usage: /unlimitedelytra <reload|reset>
+        permission: unlimitedelytra.cmd

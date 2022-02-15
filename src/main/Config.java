@@ -1,10 +1,12 @@
 package main;
 
+import java.io.File;
+
 import org.bukkit.Particle;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Config{
-
+	
 	//inair
 	public static boolean inair_boost_enabled;
 	public static double inair_boost;
@@ -48,6 +50,7 @@ public class Config{
 	public static double overwater_particles_spreadZ;
 	
 	public static void loadValues(JavaPlugin plugin) {
+
 		inair_boost_enabled = plugin.getConfig().getBoolean("inair.boost_enabled");
 		inair_boost = plugin.getConfig().getDouble("inair.boost");
 		inair_particles_enabled = plugin.getConfig().getBoolean("inair.particles.enabled");
@@ -132,6 +135,23 @@ public class Config{
 		
 		plugin.getConfig().options().copyDefaults(true);
 		plugin.saveConfig();
+	}
+	
+	public static void reloadConfig(JavaPlugin plugin) {
+		plugin.reloadConfig();
+		loadValues(plugin);
+	}
+	
+	public static void resetConfig(JavaPlugin plugin) {
+		File file = new File(plugin.getDataFolder(), "config.yml");
+        file.delete();
+       
+        plugin.saveDefaultConfig();
+        
+        reloadConfig(plugin);
+        
+	    //loadValues(plugin);
+	    
 	}
 	
 }

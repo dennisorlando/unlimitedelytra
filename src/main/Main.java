@@ -14,8 +14,11 @@ public class Main extends JavaPlugin{
 		
 		random = new Random();
 		
-		Config.addDefaults(this);
+		//Config.addDefaults(this);
+		saveDefaultConfig();
 		Config.loadValues(this);
+		
+		getCommand("unlimitedelytra").setExecutor(new Commands(this));
 		
 		MainLoop.exit = false;
 		loop = new MainLoop(this);

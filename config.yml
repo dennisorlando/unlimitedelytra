@@ -1,0 +1,48 @@
+inair:
+  boost_enabled: true
+  boost: 2
+  particles:
+    enabled: true
+    type: SOUL_FIRE_FLAME
+    amount: 0.02
+    speed: 0.1
+    offset:
+      x: 0
+      y: 0.2
+      z: 0
+    spread:
+      x: 0.3
+      y: 0
+      z: 0.3
+underwater:
+  boost_enabled: true
+  boost: 5
+  particles:
+    enabled: true
+    type: WATER_BUBBLE
+    amount: 1
+    speed: 0.3
+    offset:
+      x: 0
+      y: 0.2
+      z: 0
+    spread:
+      x: 0.2
+      y: 0.2
+      z: 0.2
+overwater:
+  particles:
+    enabled: true
+    realistic: true
+    type: WATER_WAKE
+    amount: 10
+    speed: 0.1
+    offset:
+      x: 0
+      y: 1
+      z: 0
+    spread:
+      x: 0.25
+      y: 0.1
+      z: 0.25
+  distance_from_water: 5
